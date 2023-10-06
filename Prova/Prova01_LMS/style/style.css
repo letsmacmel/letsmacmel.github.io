@@ -1,0 +1,289 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px
+}
+
+
+header {
+    margin-top: 0%;
+    width: 100%;
+    height: 50px;
+    background-color: #66172C;
+}
+
+/*coloquei um menu que um dos botões ao ser clicado mostra a listinha, não gostei dos botões 3d*/
+
+body {
+    min-width: 600px;
+    max-width: 2000px;
+    padding: 0px;
+    margin: auto;
+}
+
+body img{
+    width: 100%;
+
+}
+
+.nav {
+    display: flex;
+    height: 50px;
+    justify-content: left;
+}
+
+/*drop eu fiz a partir de uma tarefa que já havia entregado antes, nas primeiras vezes foi mais dificil editar*/
+.drop-list {
+    display: none;
+    position: absolute;
+    background-color: #fbfafd;
+}
+
+.drop-list a {
+    display: block;
+    width: 268px;
+    padding: 12px 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown button:active,
+.botao-menu:active button {
+    background-color: #66172C;
+    border: none;
+    margin-left: 30px;
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #da50855d;
+    transition: transform 400ms, box-shadow 400ms;
+
+}
+
+.dropdown button:hover,
+.botao-menu button:hover {
+    background-color: #732238;
+    box-shadow: 2px 3px 1px #dc5186;
+    transform: translate(4px, 6px);
+    border: none;
+}
+
+.botao-menu button {
+    color: white;
+    margin-left: 15px;
+    margin-top: 10px;
+    background-color: #66172C;
+    border: none;
+}
+
+.drop-list a:hover {
+
+    background-color:#df7f98;
+
+}
+
+.dropdown button {
+    color: white;
+    margin-top: 10px;
+    background-color: #66172C;
+    width: 150px;
+    border: none;
+}
+
+
+
+.dropdown:active .drop-list {
+    display: block;
+    border: none;
+}
+
+.esquerda {
+    width: 20vw;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    background-color:#912f49;
+    color: black;
+}
+
+.esquerda button {
+    margin-top: 20px;
+    background-color: #912f49;
+    border: none;
+    padding: 10px 0 5px 0;
+    text-align: left;
+    padding-left: 5px;
+    color: white
+}
+
+.esquerda button:hover {
+    background-color: #ad425f;
+    color: rgb(0, 0, 0)
+}
+
+.conteudo {
+    width: 80vw;
+    height: 1000px;
+    flex-direction: row;
+    display: flex;
+}
+
+.infos {
+    margin-bottom: 2px;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+
+.infos section {
+    margin-bottom: 15px;
+}
+
+.infos .segunda {
+    margin-bottom: 0px;
+    padding: 25px 0px 2px 20px;
+}
+
+.primeira {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2px;
+    display: flex;
+    text-align: center;
+    background-color: #ec8da7;
+    width: 800px;
+    height: 360px;
+    border-radius: 20px;
+}
+
+.segunda {
+    flex-direction: column;
+    padding: 2px;
+    display: flex;
+    text-align: center;
+    background-color: #ec8da7;
+    
+    width: 800px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.primeira .foto_coracao {
+    width: 140px;
+    height: 100px;
+}
+
+.segunda .foto_trevo {
+    padding-top: 130px;
+    width: 100px;
+    height: 100px;
+}
+
+picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+picture span {
+    position: absolute;
+}
+
+picture img {
+    position: absolute;
+}
+
+
+.carregando .loader{
+    margin-top: 350px;
+    margin-left: 380px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*O loader usa uma animação de borda para simular o carregamento inifito*/
+
+.primeira input {
+    
+    background-color: #ff8eb9;
+    margin-top: 0px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+}
+
+/*coloquei o primeiro e segundo input para separar os nomes de cada sessão*/
+
+.segunda input {
+    background-color: #ff8eb9;
+    margin-top: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+}
+
+input:active {
+    background-color: #dc5186;
+}
+
+h1 {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:600px) {
+    .esquerda{
+        justify-content: space-between;
+        display:flex;
+        flex-direction: row;
+        top: 0px;
+        left:0;
+        height: fit-content;
+        width: 200%;
+    }
+
+
+}
+/*na parte da resposividade eu não consegui adaptar corretamente meu conteudo no centro com rolagem, entao ele ficou fixo apenas para demonstração
+bom na parte da barra eu consegui transformar ela em uma barra em cima a apartir dos link do pdf*/
+@media screen and (max-width:600px) {
+    .infos{
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;  
+
+    }
+
+
+
+}

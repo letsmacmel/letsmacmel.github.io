@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Horóscopo</title>
+</head>
+<!--Fiz um site de signos e namoro semelhante ao da capricho e nele coloquei duas sessões que usam testes para
+se compor e tambem um carregamento no final da pagina como se ainda estivesse vindo mais coisas
+tive dificuldade em colocar o carregamento no lugar certo-->
+<body>
+    <header class="nav">
+
+        <div class="botao-menu">
+            <button class="header">Minha Lista</button>
+        </div>
+
+        <div class="dropdown">
+            <button class="header">Menu</button>
+            <div class="drop-list">
+                <a href="#" class="drop-lista">Horóscopo do mês</a>
+                <a href="#" class="drop-lista">Teste de fidelidade</a>
+                <a href="#" class="drop-lista">Cadastre-se</a>
+            </div>
+        </div>
+
+        <div class="botao-menu">
+            <button class="header">Help</button>
+        </div>
+    </header>
+
+    <div class="conteudo">
+
+        <section class="esquerda">
+
+            <button class="header">Mística</button>
+            <button class="header">Entretenimento</button>
+            <button class="header">Crushs</button>
+            <button class="header">Comportamento</button>
+            <button class="header">Moda</button>
+
+        </section>
+
+
+        <div class="infos">
+
+
+
+            <article>
+                <h1>Participe dos nossos teste amorosos</h1>
+
+                <section class="primeira">
+                    <h3>Encontre seu par perfeito!</h3>
+                    <p>Coloque seu signo e o signo da sua amado(a).</p>
+
+                    <picture>
+                        <img class="foto_coracao"
+                            src="https://www.maxieduca.com.br/blog/wp-content/uploads/2017/08/imagem-destacada-1024x728.png"
+                            alt="coração">
+
+                    </picture> <br>
+
+                    
+                    <form>
+                        <label for="Seunome">Seu nome:</label>
+                        <input type="text" id="Signo" name="Signo">
+                    </form>
+
+                    <form>
+                        <label for="Nomedoseuamado"> Seu Amado:</label>
+                        <input type="text" id="Nome" name="Nome">
+                    </form>
+
+                </section>
+
+                <section class="segunda">
+
+                    <h3>Saiba sua sorte do dia</h3>
+                    <br>
+                    <q>Tente a sua sorte! A vida é feita de oportunidades.
+                        O homem que vai mais longe é quase sempre aquele que tem coragem de arriscar.</q>
+                    <br>
+                    <p>Coloque seu signo e o seu nome:</p>
+
+                    <form>
+                        <label for="Signo">Seu signo:</label>
+                        <input type="text" id="Signo" name="Signo">
+                    </form>
+
+                    <form>
+                        <label for="Nome">Seu nome:</label>
+                        <input type="text" id="Nome" name="Nome">
+                    </form>
+
+
+                </section>
+
+            </article>
+
+            <div class="carregando">
+                <span class="loader"></span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
